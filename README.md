@@ -7,7 +7,7 @@ Directories | Description
 [0x00-MySQL_Advanced](0x00-MySQL_Advanced) | MySQL Advanced
 
 ## STUDENT NAME AND EMAIL ADDRESS
- ALAREEF
+ AL - AREEF
 
 email: alareefadegbite@gmail.com
 
