@@ -8,9 +8,9 @@ BEFORE UPDATE ON users
 FOR EACH ROW
 BEGIN
     IF NEW.email <> OLD.email AND OLD.valid_email = 0 THEN
-        SET NEW.valid_email = 1;
+        SET NEW.valid_email = NEW.valid_email;
     ELSEIF NEW.email <> OLD.email AND OLD.valid_email = 1 THEN
-        SET NEW.valid_email = 0;
+        SET NEW.valid_email = NEW.valid_email;
     END IF;
 END;
 //
