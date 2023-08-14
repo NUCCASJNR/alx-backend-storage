@@ -9,7 +9,7 @@ if __name__ == "__main__":
     # Establish the connection
     client = MongoClient(host="localhost", port=27017)
     # Select the database
-    db = client["logs"]
+    db = client.logs
     # Select the collection
     collection = db.nginx
     total_logs = collection.count_documents({})
