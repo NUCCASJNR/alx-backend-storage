@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-a Python function that lists all documents in a collection
+This module lists all documents in a collection
 """
 
 
