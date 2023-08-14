@@ -1,0 +1,3 @@
+// starts with holberton
+
+db.school.find({name: {$regex: '^Holberton'}});
