@@ -26,7 +26,7 @@ if __name__ == "__main__":
     #              "method DELETE": delete_log}
     # for key, value in logs_dict.items():
     #     print(f"\t{key}: {value}")
-    print("methods:")
+    print("Methods:")
     methods = ["GET", "POST", "PUT", "DELETE", "PATCH"]
     for method in methods:
         method_count = collection.count_documents({"method": method})
