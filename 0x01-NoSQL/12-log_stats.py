@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""This module contains a function that lists nginx stats"""
+"""This module  lists nginx stats"""
 
 
 from pymongo import MongoClient
