@@ -13,7 +13,7 @@ if __name__ == "__main__":
     # Select the collection
     collection = db.nginx
     total_logs = collection.count_documents({})
-    print(f"{total_logs} logs")
+    print("{} logs".format(total_logs))
     status = collection.count_documents({"path": "/status"})
     # get_log = collection.count_documents({"method": "GET"})
     # post_log = collection.count_documents({"method": "POST"})
