@@ -5,6 +5,7 @@ This is the readme for all my alx-africa Backend Storage tasks
 Directories | Description
 ------------| ----------
 [0x00-MySQL_Advanced](0x00-MySQL_Advanced) | MySQL Advanced
+[0x01-NoSQL] | Introduction to NoSQL Database
 
 ## STUDENT NAME AND EMAIL ADDRESS
  AL - AREEF
