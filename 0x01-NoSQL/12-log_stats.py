@@ -30,5 +30,5 @@ if __name__ == "__main__":
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     for method in methods:
         method_count = collection.count_documents({"method": method})
-        print(f"\t{method}: {method_count}")
-    print(f"{status} status check")
+        print("\t {}: {}".format(method, method_count))
+    print("{} status check".format(status))
