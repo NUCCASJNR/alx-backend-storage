@@ -8,6 +8,5 @@ def insert_school(mongo_collection, **kwargs):
     insert a doc in a collection
     """
 
-    docs = [kwargs]
-    mongo_collection.insert_many(docs)
-    return (kwargs['_id'])
+    result = mongo_collection.insert_one(kwargs)
+    return result.inserted_id
