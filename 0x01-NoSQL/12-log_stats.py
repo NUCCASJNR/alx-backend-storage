@@ -2,9 +2,9 @@
 
 """This module  lists nginx stats"""
 
-
-from pymongo import MongoClient
 from typing import List
+from pymongo import MongoClient
+
 if __name__ == "__main__":
     # Establish the connection
     client: MongoClient = MongoClient(host="localhost", port=27017)
