@@ -33,7 +33,7 @@ if __name__ == "__main__":
          },
         {"$limit": 10}
     ])
-    print("IPS:")
+    print("IPs:")
     for i in agg:
         log_id = i["_id"]
         ip_count = i["con"]
