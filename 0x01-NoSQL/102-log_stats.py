@@ -37,4 +37,4 @@ if __name__ == "__main__":
     for i in agg:
         log_id = i["_id"]
         ip_count = i["con"]
-        print(f"\t {log_id}: {ip_count}")
+        print(f"\t{log_id}: {ip_count}")
