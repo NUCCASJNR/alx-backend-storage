@@ -2,9 +2,10 @@
 
 """Contains a cache class"""
 
-from uuid import uuid4
-from redis import Redis
 from typing import Union
+from uuid import uuid4
+
+from redis import Redis
 
 
 class Cache:
