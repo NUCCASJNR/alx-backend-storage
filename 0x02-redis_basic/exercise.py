@@ -2,7 +2,7 @@
 
 """Contains a cache class"""
 
-from typing import Union
+from typing import Union, Callable
 from uuid import uuid4
 
 import redis
@@ -29,3 +29,36 @@ class Cache:
         key: str = str(uuid4())
         self._redis.set(key, data)
         return key
+
+    def get(self, key: str, fn: Callable = None) -> [int, bytes, float, str]:
+        """
+        convert to any desired format
+        """
+
+        data = self._redis.get(key)
+        if fn is not None:
+            return fn(data)
+        return data
+
+    def get_str(self, key: str) -> str:
+        """
+        REtrieves a string from redis using the provided key and
+        returns it as a sring
+        Args:
+            key: str retrieved from redis
+        Return:
+                str
+        """
+        return self.get(key, fn=lambda x: x.decode("utf-8"))
+
+    def get_int(self, key: int) -> int:
+        """
+           REtrieves a int from redis using the provided key and
+        returns it as an integer
+        Args:
+            key: int retrieved from redis
+        Return:
+                int
+        """
+
+        return self.get(key, fn=int)
