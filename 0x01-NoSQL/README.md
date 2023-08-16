@@ -39,6 +39,8 @@
 
 - [Official installation guide](https://intranet.alxswe.com/rltoken/8p4x14Ddn1UxKXZ5nPt3zA)
 
+- [installation](https://www.fosstechnix.com/how-to-install-mongodb-on-ubuntu-22-04-lts/)
+
 ```bash
 
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | apt-key add -
