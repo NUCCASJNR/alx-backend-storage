@@ -18,7 +18,7 @@ class Cache:
             redis: Instance of the redis class
         """
         self.__redis = Redis()
-        self.__redis.flushdb()
+        self.__redis.flushdb(True)
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """
