@@ -6,9 +6,11 @@ Directories | Description
 ------------| ----------
 [0x00-MySQL_Advanced](0x00-MySQL_Advanced) | MySQL Advanced
 [0x01-NoSQL](0x01-NoSQL) | Introduction to NoSQL Database
+[0x02-redis_basic](0x02-redis_basic) | Intro to Redis
+
 
 ## STUDENT NAME AND EMAIL ADDRESS
- AL - AREEF
+ AL-AREEF
 
 email: alareefadegbite@gmail.com
 
