@@ -5,7 +5,7 @@
 from typing import Union
 from uuid import uuid4
 
-from redis import Redis
+import redis
 
 
 class Cache:
@@ -18,7 +18,7 @@ class Cache:
         Args:
             redis: Instance of the redis class
         """
-        self._redis = Redis()
+        self._redis = redis.Redis()
         self._redis.flushdb()
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
