@@ -17,8 +17,8 @@ class Cache:
         Args:
             redis: Instance of the redis class
         """
-        self.__redis = Redis()
-        self.__redis.flushdb(True)
+        self._redis = Redis()
+        self._redis.flushdb()
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """
@@ -26,5 +26,5 @@ class Cache:
         passed to the function as the value
         """
         key: str = str(uuid4())
-        self.__redis.set(key, data)
+        self._redis.set(key, data)
         return key
