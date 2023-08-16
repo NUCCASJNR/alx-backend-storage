@@ -4,8 +4,22 @@
 
 from typing import Union, Callable
 from uuid import uuid4
+from functools import wraps
 
 import redis
+
+
+def count_calls(method: Callable) -> Callable:
+    """
+    Decorator function that takes in a callable
+    """
+    @wraps(method)
+    def wrapper(self, *args, **kwargs):
+        """increment count"""
+        if isinstance(self._redis, redis.Redis):
+            self._redis.incr(method.__qualname__)
+        return method(self, *args, **kwargs)
+    return wrapper
 
 
 class Cache:
@@ -21,6 +35,7 @@ class Cache:
         self._redis = redis.Redis()
         self._redis.flushdb()
 
+    @count_calls
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """
         Generate random id, stes it as the key and use the data
