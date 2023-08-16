@@ -61,4 +61,4 @@ class Cache:
                 int
         """
 
-        return self.get(key, fn=int)
+        return self.get(key, fn=lambda x: int(x))
