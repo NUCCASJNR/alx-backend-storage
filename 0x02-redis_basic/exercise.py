@@ -17,7 +17,7 @@ class Cache:
         Args:
             redis: Instance of the redis class
         """
-        self.__redis = Redis(host="127.0.0.1", port=6379)
+        self.__redis = Redis()
         self.__redis.flushdb()
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
